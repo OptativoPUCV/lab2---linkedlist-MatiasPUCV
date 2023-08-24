@@ -99,7 +99,7 @@ void pushFront(List *list, void *data) {
   list->head->prev = new;
 
   new->next = list->head;
-  list->head = new->next;
+  list->head = new;
 }
 
 void pushBack(List *list, void *data) {
