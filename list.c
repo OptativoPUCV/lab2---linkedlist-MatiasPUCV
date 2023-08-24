@@ -42,7 +42,7 @@ List *createList() {
 void* firstList(List *list) {
   list->current = list->head;
 
-  return (void*)list->head->data;
+  return list->head->data;
 }
 
 void* nextList(List *list) {
@@ -51,7 +51,21 @@ void* nextList(List *list) {
   return list->current->data;
 }
 
-void *lastList(List *list) { return NULL; }
+void *lastList(List *list)
+{
+  if (list->head = NULL)
+      return NULL;
+  
+  Node* current = list->head;
+  Node* last;
+  while (current != NULL)
+    {
+      current = current->next;
+      last = current;
+    }
+
+  return last;
+}
 
 void *prevList(List *list) { return NULL; }
 
