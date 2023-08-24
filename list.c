@@ -29,8 +29,8 @@ Node *createNode(void *data) {
 }
 
 List *createList() {
-  
-  List* list = malloc(sizeof(List));
+
+  List *list = malloc(sizeof(List));
 
   list->head = NULL;
   list->current = NULL;
@@ -39,27 +39,26 @@ List *createList() {
   return list;
 }
 
-void* firstList(List *list) {
+void *firstList(List *list) {
+
   list->current = list->head;
 
-  return NULL;
+  return list->current->data;
 }
 
-void* nextList(List *list) {
+void *nextList(List *list) {
   list->current = list->current->next;
 
   return list->current->data;
 }
 
-void *lastList(List *list)
-{
-  Node* current = list->head;
-  Node* last = NULL;
-  while (current != NULL)
-    {
-      last = current;
-      current = current->next;
-    }
+void *lastList(List *list) {
+  Node *current = list->head;
+  Node *last = NULL;
+  while (current != NULL) {
+    last = current;
+    current = current->next;
+  }
 
   list->current = last;
 
