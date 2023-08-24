@@ -218,3 +218,9 @@ list.c:112:9: error: unused variable ‘new’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 ca05c06
+Thu 24 Aug 2023 09:00:58 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  10|2
+total_score: 45/70
+c2d1a1a

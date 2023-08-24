@@ -109,7 +109,7 @@ void pushBack(List *list, void *data) {
 
 void pushCurrent(List *list, void *data)
 {
-  Node *new = createNode(data);
+  //Node *new = createNode(data);
 
 
     if(list->current == list->head)
