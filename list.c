@@ -111,13 +111,20 @@ void pushCurrent(List *list, void *data)
 {
   Node *new = createNode(data);
 
-  if (list->current == NULL)
-  {
+
     if(list->current == list->head)
+    {
       pushFront(list, data);
+      return;
+    }
     else if(list->current == list->tail)
+    {
       pushBack(list, data);
-  }
+      return;
+    }
+
+
+
   
 }
 

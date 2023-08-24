@@ -207,3 +207,14 @@ list.c:112:9: error: unused variable ‘new’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 e59d941
+Thu 24 Aug 2023 09:00:49 PM UTC: 
+ list.c | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:112:9: error: unused variable ‘new’ [-Werror=unused-variable]
+  112 |   Node *new = createNode(data);
+      |         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+ca05c06
