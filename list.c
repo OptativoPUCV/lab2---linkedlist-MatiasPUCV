@@ -42,10 +42,10 @@ List *createList() {
 void* firstList(List *list) {
   list->current = list->head;
 
-  return list->current->data;
+  return list->current;
 }
 
-void *nextList(List *list) {
+void* nextList(List *list) {
   list->current = list->current->next;
 
   return list->current->data;
