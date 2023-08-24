@@ -57,8 +57,8 @@ void *lastList(List *list)
   Node* last;
   while (current != NULL)
     {
-      current = current->next;
       last = current;
+      current = current->next;
     }
 
   return last;
