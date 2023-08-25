@@ -108,27 +108,16 @@ void pushBack(List *list, void *data) {
 }
 
 void pushCurrent(List *list, void *data) {
+  
   Node* new = createNode(data);
 
-  if (list->current == list->head) {
-    printf("HEllo\n");
-    pushFront(list, data);
-    list->current = list->head;
-    return;
-  } else if (list->current == list->tail) {
-    pushBack(list, data);
-    list->current = list->tail;
-    return;
-  }
+  Node* current = list->current;
 
-  Node* old = list->current;
+  new->next = current->next;
+  new->prev = current;
 
-  new->prev = old->prev;
-  new->next = old;
-  
-  old->prev->next = new;
-  old->prev = new;
-
+  current->next->prev = new;
+  current->next = new;
   
 }
 
