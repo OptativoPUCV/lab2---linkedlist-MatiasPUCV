@@ -120,11 +120,12 @@ void pushCurrent(List *list, void *data) {
 
   Node* old = list->current;
 
-  old->prev = new;
-  old->prev->next = new;
-
   new->prev = old->prev;
   new->next = old;
+  
+  old->prev->next = new;
+  old->prev = new;
+
   
 }
 
