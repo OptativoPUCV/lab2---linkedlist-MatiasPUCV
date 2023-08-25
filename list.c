@@ -116,7 +116,7 @@ void pushCurrent(List *list, void *data) {
   new->next = current->next;
   new->prev = current;
 
-  if (current->next->prev == NULL)
+  if (current->next == NULL)
     printf("HELLO\n");
 
   current->next->prev = new;
