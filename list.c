@@ -142,11 +142,9 @@ void *popCurrent(List *list)
   Node* current = list->current;
   //Node* result = current->data;
 
-  if(current->next == NULL && current->prev == NULL)
-    return NULL;
-  else if (current->next == NULL)
+  if (current->next == NULL)
   {
-    
+    current->prev == NULL;
   }
     
 
