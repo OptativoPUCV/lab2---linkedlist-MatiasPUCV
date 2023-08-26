@@ -140,6 +140,10 @@ void *popBack(List *list) {
 void *popCurrent(List *list)
 {
   Node* current = list->current;
+
+  if (current == NULL)
+    return NULL;
+  
   Node* result = current->data;
 
   if (current->next != NULL && current->prev == NULL)
