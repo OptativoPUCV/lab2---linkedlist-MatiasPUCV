@@ -146,7 +146,7 @@ void *popCurrent(List *list)
   
   Node* result = current->data;
 
-  if (current->next != NULL && current->prev == NULL)
+  if (current->next != NULL && current->prev != NULL)
   {
     current->next->prev = current->prev;
     current->prev->next = current->next;
