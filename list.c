@@ -115,6 +115,7 @@ void pushCurrent(List *list, void *data) {
   {
     current->next = new;
     new->prev = current;
+    list->tail = new;
     return;
   }
 
