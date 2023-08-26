@@ -152,6 +152,13 @@ void *popCurrent(List *list)
     current->prev->next = current->next;
   }
 
+  if(current->next == NULL)
+    current->prev = NULL;
+
+  if(current->prev == NULL)
+    current->next = NULL;
+    
+
   free(current);
   
   return result;
