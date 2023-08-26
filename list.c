@@ -154,11 +154,13 @@ void *popCurrent(List *list)
   else if(current->next == NULL && current->prev != NULL)
   {
     current->prev->next = NULL;
+    list->tail = current->prev;
     list->current = current->prev;
   }
   else if(current->prev == NULL && current->next != NULL)
   {
     current->next->prev = NULL;
+    list->head = current->next;
     list->current = current->next;
   }
   else if (current->next == NULL && current->prev == NULL)
