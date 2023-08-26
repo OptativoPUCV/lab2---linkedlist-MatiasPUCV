@@ -109,15 +109,15 @@ void pushBack(List *list, void *data) {
 
 void pushCurrent(List *list, void *data) {
 
+  Node* new = createNode(data);
   Node* current = list->current;
   if (list->current->next == NULL)
   {
-    pushBack(list, data);
-    list->current = current;
+    current->next = new;
+    new->prev = current;
     return;
   }
 
-  Node* new = createNode(data);
   new->prev = current;
   new->next = current->next;
 
